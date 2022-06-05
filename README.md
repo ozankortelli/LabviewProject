@@ -37,6 +37,7 @@
 
 ## Arduino Code of The System
 
+
 int kirmizi_led=2;             //2 numaralı pine kırmızı led bağladık
 
 int mavi_led=3;             // 3 numaralı pine mavi led bağladık 
@@ -77,7 +78,8 @@ Serial.println(digital_sicaklik);
 digitalWrite(mavi_led,HIGH);          // diğer durumda mavi led yansın kırmızı led sönsün
 
 digitalWrite(kirmizi_led,LOW);}
-}***
+}
+
 ## 
 
 ## BLOCK DIAGRAM DESIGN BY LABVIEW
