@@ -31,31 +31,51 @@
 
 ## ARDUINO CONNECTION
 ![1](https://user-images.githubusercontent.com/97398192/172064416-c9279c6f-0775-4b50-945d-d52c132d1a5c.jpeg)
+
 ![2](https://user-images.githubusercontent.com/97398192/172064434-30f02751-3213-4f62-be1e-1e5c57a3b78f.jpeg)
 
 
 ## Arduino Code of The System
 
-**int kirmizi_led=2;             //2 numaralı pine kırmızı led bağladık
+int kirmizi_led=2;             //2 numaralı pine kırmızı led bağladık
+
 int mavi_led=3;             // 3 numaralı pine mavi led bağladık 
+
 int lm_35=A0;                  // A0 numaralı pine sensörün base ucunu bağladık
+
 void setup(){
+
 pinMode(kirmizi_led,OUTPUT);            //  kırmızı led çıkış olarak seçildi
+
 pinMode(mavi_led,OUTPUT);           // mavi led çıkış olarak seçildi
+
 pinMode(lm_35,INPUT);       
+
 Serial.begin(9600);// sensörden bilgi alınacağı için giriş olarak şeçildi
 }
+
 void loop(){
+
 float lm35_okunan_deger= analogRead(lm_35);     //analog değeri değişkene atadık
+
 float analog_sicaklik=(lm35_okunan_deger/1023)*5000;  //okunan değeri analog sıcaklık bilgisine atadık
+
 float digital_sicaklik= analog_sicaklik/10.0;     //analog sıcaklığı Digital sıcak çevirdik
+
 if(digital_sicaklik>35){
+
 Serial.println(digital_sicaklik);
+
 digitalWrite(kirmizi_led,HIGH);
+
 digitalWrite(mavi_led,LOW);}          //sıcaklık 30 derece üstünde ise kırmızı led yansın
+
 else{
+
 Serial.println(digital_sicaklik);
+
 digitalWrite(mavi_led,HIGH);          // diğer durumda mavi led yansın kırmızı led sönsün
+
 digitalWrite(kirmizi_led,LOW);}
 }***
 ## 
@@ -67,4 +87,5 @@ digitalWrite(kirmizi_led,LOW);}
 
 #  FRONT PANEL DESIGN BY LABVIEW
 ![Ekran-G-r-nt-s-235](https://i.ibb.co/9YK2qMZ/Ekran-G-r-nt-s-235.png)
+
 ![Ekran-G-r-nt-s-236](https://i.ibb.co/fQ9xFGW/Ekran-G-r-nt-s-236.png)
