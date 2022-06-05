@@ -30,8 +30,10 @@
 ## **The output voltages of LM35 temperature sensors vary in proportion to the temperature. The measuring range is between -55 and 150 degrees. It provides 0.5 degree sensitivity with a supply voltage in the range of 4-30 V and a current of less than 60 micro A. The output voltage increases by 10mV for each degree. With this value, the required ratio is established and the temperature of the external environment is converted from analog to digital, that is, to values ​​that we can see digitally.**
 
 ## ARDUINO CONNECTION
-![1](https://i.ibb.co/JzC3jqn/1.jpg)
-![2](https://i.ibb.co/TTq19K2/2.jpg)
+![1](https://user-images.githubusercontent.com/97398192/172064416-c9279c6f-0775-4b50-945d-d52c132d1a5c.jpeg)
+![2](https://user-images.githubusercontent.com/97398192/172064434-30f02751-3213-4f62-be1e-1e5c57a3b78f.jpeg)
+
+
 ## Arduino Code of The System
 
 **int kirmizi_led=2;             //2 numaralı pine kırmızı led bağladık
